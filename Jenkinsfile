@@ -13,7 +13,6 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'mvn clean package' // или другая команда для сборки проекта
-                bash 'pwd'
             }
         }
 
