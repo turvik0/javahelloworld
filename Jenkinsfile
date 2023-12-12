@@ -1,5 +1,5 @@
 pipeline {
-
+    agent any
     stages {
         // stage('Checkout') {
         //     steps {
@@ -10,6 +10,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'mvn clean package' // или другая команда для сборки проекта
+                bash 'pwd'
             }
         }
 
